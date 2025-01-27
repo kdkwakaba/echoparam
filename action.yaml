@@ -1,0 +1,14 @@
+name: Echo parameter
+description: Output parameter in terminal
+
+inputs:
+  parameter:
+    description: "Parameter for echo."
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: "echo test"
+      shell: bash
+      run: echo "設定したパラメーターは ${{ inputs.parameter }} です。"
